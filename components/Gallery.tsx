@@ -5,18 +5,18 @@ import { useEffect, useEffectEvent, useRef, useState } from "react";
 import { AnimatePresence, m } from "motion/react";
 import { ChevronLeft, ChevronRight, Maximize2, X } from "lucide-react";
 import { gallery } from "@/data/gallery";
-import { SectionLabel } from "@/components/ui/SectionLabel";
 
 export function Gallery() {
   const [index, setIndex] = useState<number | null>(null);
   const [direction, setDirection] = useState(0);
   const triggerRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const openedIndex = useRef(0);
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
-  const lastIndex = useRef(0);
+
 
   const open = (i: number) => {
-    lastIndex.current = i;
+    openedIndex.current = i;
     setDirection(0);
     setIndex(i);
   };
@@ -24,13 +24,12 @@ export function Gallery() {
   const close = () => {
     setIndex(null);
     // return focus to the image that opened the viewer
-    window.setTimeout(() => triggerRefs.current[lastIndex.current]?.focus(), 0);
+    window.setTimeout(() => triggerRefs.current[openedIndex.current]?.focus(), 0);
   };
 
   const go = (delta: number) => {
     if (index === null) return;
     const next = (index + delta + gallery.length) % gallery.length;
-    lastIndex.current = next;
     setDirection(delta);
     setIndex(next);
   };
@@ -86,65 +85,16 @@ export function Gallery() {
   return (
     <section id="gallery" aria-labelledby="gallery-title" className="section-y relative border-t border-line/60 bg-charcoal">
       <div className="container-x">
-        <div className="mb-12 grid grid-cols-1 gap-8 md:mb-16 lg:grid-cols-12 lg:items-end">
-          <div className="lg:col-span-7">
-            <SectionLabel index="06" label="The Gallery" className="mb-8" />
-            <h2
-              id="gallery-title"
-              className="display-tight text-[clamp(2.1rem,9vw,3.25rem)] md:text-[clamp(3rem,5.6vw,5rem)]"
-              data-reveal
-            >
-              The details speak<span className="text-accent">.</span>
-            </h2>
-          </div>
-          <div className="lg:col-span-5 lg:justify-self-end lg:text-right" data-reveal>
-            <p className="eyebrow inline-flex items-center gap-2 border border-line px-3 py-2 text-left text-[0.6rem] tracking-[0.2em] text-silver">
-              <span className="h-1.5 w-1.5 bg-accent" aria-hidden="true" />
-              Automotive studies / Concept imagery
-            </p>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-silver lg:ml-auto">
-              Licensed stock photography selected to illustrate the studio’s visual direction. These are not
-              KAVERO customer projects.
-            </p>
-          </div>
+        <div className="studio-intro">
+          <h2 id="gallery-title">The finish,<br />in detail.</h2>
+          <p>Reflected light. Rich materials. Precise care.<br />AI-generated concept imagery illustrating the KAVERO approach.</p>
         </div>
-
-        <ul className="gallery-grid">
+        <ul className="editorial-gallery">
           {gallery.map((item, i) => (
-            <li
-              key={item.caption}
-              className="gallery-tile"
-              data-reveal="fade"
-              style={{ "--reveal-delay": `${(i % 4) * 80}ms` } as React.CSSProperties}
-            >
-              <button
-                ref={(el) => {
-                  triggerRefs.current[i] = el;
-                }}
-                type="button"
-                onClick={() => open(i)}
-                aria-label={`Open image ${i + 1} of ${gallery.length}: ${item.alt}`}
-                className="group relative block h-full w-full overflow-hidden bg-graphite text-left"
-              >
-                <Image
-                  src={item.src}
-                  alt=""
-                  fill
-                  quality={70}
-                  placeholder="blur"
-                  sizes="(min-width: 768px) 45vw, 50vw"
-                  style={item.focus ? { objectPosition: item.focus } : undefined}
-                  className="object-cover contrast-[1.04] saturate-[0.8] transition-[transform,filter] duration-[1.2s] ease-[var(--ease-premium)] group-hover:scale-[1.05] md:brightness-[0.86] md:group-hover:brightness-100"
-                />
-                <span className="absolute inset-0 bg-gradient-to-t from-ink/75 via-transparent to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-100" />
-                <span className="absolute right-3 bottom-3 left-3 flex items-end justify-between gap-3 sm:right-4 sm:bottom-4 sm:left-4">
-                  <span className="text-[0.6rem] font-medium tracking-[0.2em] text-bone/90 uppercase sm:text-[0.65rem]">
-                    <span>{item.caption}</span>
-                  </span>
-                  <span className="hidden h-9 w-9 shrink-0 translate-y-2 items-center justify-center border border-bone/30 bg-ink/40 opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 md:flex">
-                    <Maximize2 className="h-4 w-4" aria-hidden="true" />
-                  </span>
-                </span>
+            <li key={item.caption} className="gallery-tile">
+              <button ref={el => { triggerRefs.current[i] = el; }} type="button" onClick={() => open(i)} aria-label={"Enlarge " + item.caption}>
+                <Image src={item.src} alt={item.alt} fill quality={85} sizes={i === 0 ? "(min-width:1536px) 1000px, (min-width:768px) 65vw, calc(100vw - 48px)" : i < 3 ? "(min-width:1536px) 560px, (min-width:768px) 38vw, 50vw" : "(min-width:1536px) 450px, (min-width:768px) 30vw, 50vw"} style={{objectPosition:item.focus}} />
+                <span className="gallery-caption">{item.caption}<Maximize2 size={18} aria-hidden="true" /></span>
               </button>
             </li>
           ))}
@@ -208,7 +158,7 @@ export function Gallery() {
                       fill
                       quality={80}
                       sizes="100vw"
-                      placeholder="blur"
+                      loading="eager"
                       className="object-contain"
                     />
                   </div>

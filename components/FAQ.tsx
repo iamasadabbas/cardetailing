@@ -4,7 +4,6 @@ import { useId, useState } from "react";
 import { AnimatePresence, m } from "motion/react";
 import { Plus } from "lucide-react";
 import { faqs } from "@/data/content";
-import { SectionLabel } from "@/components/ui/SectionLabel";
 import { buttonClasses } from "@/components/ui/Button";
 
 export function FAQ() {
@@ -16,8 +15,7 @@ export function FAQ() {
       <div className="container-x">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-5">
-            <div className="lg:sticky lg:top-[calc(var(--header-h)+2.5rem)]">
-              <SectionLabel index="09" label="FAQ" className="mb-8" />
+            <div className="faq-introduction">
               <h2
                 id="faq-title"
                 className="display-tight text-[clamp(2.1rem,9vw,3.25rem)] md:text-[clamp(3rem,5.4vw,4.5rem)] lg:text-[clamp(2.75rem,3.6vw,3.6rem)]"

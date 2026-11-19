@@ -1,15 +1,17 @@
-import type { StaticImageData } from "next/image";
-import img911 from "@/public/images/gallery-911-street.jpg";
-import imgFront from "@/public/images/final-front.jpg";
-import imgMono from "@/public/images/gallery-mono-gt.jpg";
-import imgBlack from "@/public/images/gallery-black-front.jpg";
-import imgProfile from "@/public/images/featured-silhouette.jpg";
+﻿import type { StaticImageData } from "next/image";
+import polished from "@/public/images/production/vehicle.webp";
+import correction from "@/public/images/production/gallery-finish.webp";
+import interior from "@/public/images/production/gallery-interior.webp";
+import coating from "@/public/images/production/gallery-coating.webp";
+import cabin from "@/public/images/production/cabin.webp";
+import wash from "@/public/images/production/gallery-wash.webp";
+
 export type GalleryItem = { src: StaticImageData; alt: string; caption: string; layout: string; focus?: string };
-// Licensed concept photography, not KAVERO client work. See IMAGE-CREDITS.md.
 export const gallery: GalleryItem[] = [
- {src:img911, alt:"Black Porsche 911 with bronze wheels on a quiet city street", caption:"A study in gloss", layout:"", focus:"50% 65%"},
- {src:imgFront, alt:"Silver Ferrari photographed head-on with sculpted bodywork and sharp reflections", caption:"Sculpted in silver", layout:"", focus:"50% 70%"},
- {src:imgMono, alt:"Dark Mercedes grand tourer at a harbour, photographed in monochrome", caption:"Depth. Clarity. Presence.", layout:"", focus:"50% 70%"},
- {src:imgBlack, alt:"Gloss black Audi facing forward at dusk", caption:"The finer details", layout:"", focus:"50% 65%"},
- {src:imgProfile, alt:"Black Mercedes coupe in profile under a narrow band of light", caption:"Light meets form", layout:"", focus:"50% 65%"}
+  {src:polished, alt:"Black Porsche with illuminated rear light in a dark studio", caption:"Sculpted in light", layout:"",focus:"55% 50%"},
+  {src:correction, alt:"Refined black paint and headlight glass under studio inspection lights", caption:"Paint clarity", layout:""},
+  {src:interior, alt:"Technician cleaning a black leather steering wheel by hand", caption:"Interior care", layout:""},
+  {src:coating, alt:"Applicator block applying ceramic coating to polished paint", caption:"Ceramic protection", layout:""},
+  {src:cabin, alt:"Premium black leather cabin and steering wheel", caption:"Cabin materials", layout:""},
+  {src:wash, alt:"Gloved hand carefully cleaning a black vehicle wheel", caption:"Wheel detailing", layout:""}
 ];

@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+node_modules/
 /.pnp
 .pnp.*
 .yarn/*
@@ -39,3 +39,36 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local design references, QA artifacts, and inactive photography
+/.design/
+/.qa/
+/images/
+/public/images/concept/
+/public/images/studio/
+/public/images/ceramic-beading.jpg
+/public/images/coating-detail.jpg
+/public/images/detailing-bay.jpg
+/public/images/featured-silhouette.jpg
+/public/images/final-front.jpg
+/public/images/gallery-911-street.jpg
+/public/images/gallery-black-front.jpg
+/public/images/gallery-dark-garage.jpg
+/public/images/gallery-hangar.jpg
+/public/images/gallery-mist.jpg
+/public/images/gallery-mono-gt.jpg
+/public/images/gallery-pressure-rinse.jpg
+/public/images/gallery-suv-garage.jpg
+/public/images/hand-wash.jpg
+/public/images/hero-supercar.png
+/public/images/interior-cabin.jpg
+/public/images/interior-care.jpg
+/public/images/interior-studio.jpg
+/public/images/paint-gloss.jpg
+/public/images/paint-light.jpg
+/public/images/paint-polishing.jpg
+/public/images/protection-film.jpg
+/public/images/studio-hero.jpg
+/public/images/studio-porsche.jpg
+/public/images/wheel-care.jpg
+/public/images/why-pressure-wash.jpg

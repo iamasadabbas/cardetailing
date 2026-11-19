@@ -142,7 +142,7 @@ export function Header() {
         <div className="flex items-center gap-3">
           <span className="hidden sm:block">
             <a href="#contact" className={buttonClasses("primary", "md")}>
-              <span>Book a Detail</span>
+              <span>Book now</span>
             </a>
           </span>
 
@@ -230,7 +230,7 @@ export function Header() {
                 onClick={() => close(false)}
                 className={buttonClasses("primary", "lg", "w-full")}
               >
-                <span>Book a Detail</span>
+                <span>Book now</span>
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </a>
               <p className="mt-6 text-center text-[0.65rem] tracking-[0.24em] text-silver uppercase">

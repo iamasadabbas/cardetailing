@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { siteConfig } from "@/data/siteConfig";
 import "./globals.css";
+import "./studio.css";
 
 const inter = Inter({
   subsets: ["latin"],

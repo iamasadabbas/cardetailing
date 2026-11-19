@@ -1,10 +1,10 @@
 import type { StaticImageData } from "next/image";
 import type { ServiceOptionValue } from "./inquiry";
 
-import exteriorImg from "@/public/images/gallery-pressure-rinse.jpg";
-import interiorImg from "@/public/images/interior-studio.jpg";
-import paintImg from "@/public/images/gallery-911-street.jpg";
-import ceramicImg from "@/public/images/coating-detail.jpg";
+import exteriorImg from "@/public/images/production/wash.webp";
+import interiorImg from "@/public/images/production/interior.webp";
+import paintImg from "@/public/images/production/paint.webp";
+import ceramicImg from "@/public/images/production/coating.webp";
 
 export type Service = {
   number: string;
@@ -26,8 +26,8 @@ export const services: Service[] = [
       "Careful exterior cleaning, wheel care, and finishing treatments that leave your vehicle looking its best.",
     points: ["Pre-wash rinse", "Wheels & tires", "Exterior finishing"],
     image: exteriorImg,
-    alt: "A detailer rinsing the bodywork of a dark BMW before hand washing",
-    focus: "50% 55%",
+    alt: "Concept image of a black car being washed by hand",
+    focus: "50% 68%",
     inquiry: "exterior-detailing",
   },
   {
@@ -37,7 +37,7 @@ export const services: Service[] = [
       "Detailed attention to seats, carpets, trim, and frequently touched surfaces for a refreshed cabin.",
     points: ["Seats & carpets", "Trim & panels", "Touch surfaces"],
     image: interiorImg,
-    alt: "Ferrari cabin with black leather seats, a sculpted dashboard and a leather steering wheel",
+    alt: "Concept image of a gloved detailer brushing a black leather seat",
     focus: "50% 50%",
     inquiry: "interior-deep-cleaning",
   },
@@ -48,7 +48,7 @@ export const services: Service[] = [
       "Specialized polishing processes designed to address eligible surface imperfections and improve paint clarity.",
     points: ["Paint assessment", "Machine polishing", "Clarity & gloss"],
     image: paintImg,
-    alt: "Glossy black sports car with sharp reflections along its bodywork",
+    alt: "Concept image of a gloved technician polishing black automotive paint",
     focus: "50% 60%",
     inquiry: "paint-correction",
   },
@@ -59,7 +59,7 @@ export const services: Service[] = [
       "Protective coating options designed to support easier maintenance and provide a carefully finished appearance.",
     points: ["Surface preparation", "Coating options", "Aftercare guidance"],
     image: ceramicImg,
-    alt: "Close-up of water droplets beading on polished automotive paint",
+    alt: "Concept image of ceramic coating applied with an applicator block",
     focus: "50% 50%",
     inquiry: "ceramic-coating",
   },

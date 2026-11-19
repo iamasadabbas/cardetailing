@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
   },
   images: {
     // Next.js 16 requires an explicit allowlist of quality values.
-    qualities: [70, 80],
+    qualities: [70, 80, 85],
     formats: ["image/avif", "image/webp"],
   },
 };

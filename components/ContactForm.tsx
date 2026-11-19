@@ -6,7 +6,6 @@ import { AlertCircle, ChevronDown, Info, Loader2, RotateCcw } from "lucide-react
 import { serviceOptions } from "@/data/inquiry";
 import { useInquiry } from "@/components/InquiryProvider";
 import { submitInquiry, isDemoMode, type InquiryPayload } from "@/lib/inquiry";
-import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Button } from "@/components/ui/Button";
 
 type FieldName = keyof InquiryPayload;
@@ -117,15 +116,14 @@ export function ContactForm() {
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-10">
           {/* Intro column */}
           <div className="lg:col-span-6 xl:col-span-5">
-            <SectionLabel index="10" label="Let's Get Started" className="mb-8" />
             <h2
               id="contact-title"
               className="display-tight text-[clamp(2.05rem,8.8vw,3.25rem)] md:text-[clamp(3rem,5.6vw,4.5rem)] lg:text-[clamp(2.6rem,3.5vw,3.6rem)]"
               data-reveal
             >
-              Your car deserves
+              Ready to plan
               <br />
-              <span className="text-silver/55">the right attention.</span>
+              <span className="text-silver/55">your vehicle&rsquo;s care?</span>
             </h2>
             <p className="mt-8 max-w-md text-lg leading-relaxed text-silver" data-reveal>
               Tell us what your vehicle needs and explore the detailing options that could be right for you.
@@ -250,7 +248,7 @@ export function ContactForm() {
                           onBlur={() => blur("service")}
                           aria-invalid={errors.service && !service ? true : undefined}
                           aria-describedby={errors.service && !service ? "f-service-error" : undefined}
-                          className={`field-input ${service ? "" : "text-[#6d757b]"}`}
+                          className={`field-input ${service ? "" : "text-[#a6a5a1]"}`}
                         >
                           <option value="" disabled>
                             Select a service

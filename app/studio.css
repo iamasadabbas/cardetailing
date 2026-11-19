@@ -1,0 +1,215 @@
+﻿header > .container-x {border-bottom:0}
+header nav[aria-label="Primary"] a {font-size:.9rem!important;letter-spacing:0!important}
+header .font-display {letter-spacing:-.035em;font-size:1.5rem;font-weight:700}
+header a[aria-label*="back to top"] svg {display:none}
+.studio-hero {position:relative;isolation:isolate;display:grid;align-items:center;min-height:clamp(610px,56.25vw,890px);background:#000;overflow:hidden}
+.studio-hero-photo {position:absolute;inset:0 0 0 auto;width:61%;z-index:-1;mask-image:linear-gradient(90deg,transparent,#000 12%)}
+.studio-hero-photo img {object-fit:cover;object-position:center 75%}
+.studio-hero-copy {width:100%;padding-top:var(--header-h)}
+.studio-hero h1,.studio-intro h2,.workshop-content h2,#packages h2,#faq h2,#contact h2 {font-family:var(--font-sans);font-weight:450;letter-spacing:-.05em;text-transform:none;line-height:1.09}
+.studio-hero h1 {font-size:clamp(2.8rem,4.1vw,4.8rem)}
+.studio-hero-copy p {max-width:min(33vw,450px);margin:24px 0 30px;color:#c4c3c0;line-height:1.55}
+.studio-actions {display:flex;gap:12px;flex-wrap:wrap}
+.studio-band,#packages,#contact {background:#050505}
+.studio-band,.workshop-content,.section-y {padding-block:clamp(65px,7vw,110px)}
+.studio-intro {display:grid;grid-template-columns:1fr 1fr;gap:6%;align-items:center;margin-bottom:clamp(30px,4vw,62px)}
+.studio-intro h2,.workshop-content h2,#packages h2 {font-size:clamp(2.2rem,3.4vw,3.8rem)}
+.studio-intro p,.method-item p,.workshop-content li p {color:#b6b6b6;line-height:1.55}
+.studio-intro p {max-width:520px;font-size:clamp(1rem,1.4vw,1.22rem)}
+.care-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.care-card,.method-item,.workshop-content li>div {border-radius:18px;border:1px solid #2a2a29;background:#151515}
+.care-card {position:relative;padding:26px 22px;transition:border-color .2s}
+.care-card:hover,.care-card:focus-within {border-color:#a3957c}
+.care-card .service-copy {padding:0}
+.care-card .service-copy h3 {font:450 clamp(1.16rem,1.6vw,1.65rem)/1.18 var(--font-sans);letter-spacing:-.045em;margin:0 0 16px}
+.care-card h3 a {display:flex;justify-content:space-between;gap:6px}
+.care-card h3 a::after {content:"";position:absolute;inset:0;border-radius:inherit}
+.care-card h3 span {font-size:.95rem;color:#c7b89a}
+.care-card .service-copy>p {font-size:.94rem;line-height:1.55}
+#why-kavero {background:#090909}
+.method-layout {display:grid;grid-template-columns:2fr 3fr;gap:clamp(20px,3vw,48px);align-items:stretch}
+.method-list {display:grid;gap:12px}
+.method-item {padding:0 20px}
+.method-item[data-selected="true"] {border-color:#a39780}
+.method-item button {display:flex;align-items:baseline;gap:18px;width:100%;text-align:left;padding:18px 0;font-size:1.2rem;letter-spacing:-.035em}
+.method-item button[aria-expanded="true"],.method-item button span {color:#c7b89a}
+.method-item button span {font-size:.9rem}
+.method-item p {padding:0 0 20px 36px;font-size:.94rem}
+.method-photo {position:relative;min-height:320px;overflow:hidden;border-radius:18px}
+#why-kavero .method-photo img {object-fit:cover;filter:saturate(.65)}
+#process {background:#0d0d0d;position:relative;isolation:isolate;overflow:hidden}
+.workshop-image {position:absolute;inset:0 0 0 auto;width:72%;z-index:-1;mask-image:linear-gradient(90deg,transparent,black 43%)}
+.workshop-image img {object-fit:cover;object-position:center 54%;filter:saturate(.6)}
+.workshop-content h2 {margin-bottom:32px}
+.workshop-content ol {max-width:450px}
+#process .workshop-content li {display:flex;align-items:center;gap:20px;position:relative;padding:8px 0}
+.workshop-content li>span {display:grid;place-items:center;width:32px;height:32px;flex:none;border-radius:50%;background:#c7b89a;color:#111;font-size:.8rem}
+.workshop-content li:not(:last-child)::after {content:"";position:absolute;left:15px;top:calc(50% + 16px);height:calc(100% - 32px);width:1px;background:#756e60}
+.workshop-content li>div {padding:15px 20px;background:#151515ed}
+.workshop-content li h3 {font-size:1.1rem;line-height:1.35}
+#process .workshop-content li p {margin-top:5px;font-size:.89rem;line-height:1.45}
+#gallery {background:#080808}
+#gallery .gallery-tile {overflow:hidden;border-radius:16px}
+#gallery .gallery-tile img,#gallery [role="dialog"] img {filter:saturate(.85)}
+#packages .studio-section-head {display:block;text-align:center}
+#packages .studio-section-head p {max-width:520px;margin:18px auto 0}
+.package-collection {gap:20px;border:0}
+#packages .package-story {background:#151515;border:1px solid #292929;border-radius:20px;padding:26px;min-width:0}
+#packages .package-story:nth-child(2) {border-color:#9f927b}
+#packages .package-story:nth-child(2) h3 {color:#c7b89a}
+#packages .package-story h3 {font:450 1.65rem/1.2 var(--font-sans);letter-spacing:-.045em;margin:0 0 14px}
+.package-story li::before {content:"✓";color:#c7b89a}
+.package-story .group\/btn {align-self:stretch}
+#contact .relative.border {background:#151515;border-radius:22px}
+#contact input,#contact select,#contact textarea {border-radius:12px;border:1px solid #454545;padding-inline:14px}
+#faq {background:#101010}
+.final-studio {background:#ef6b3c}
+.studio-footer {padding:75px 20px 40px;text-align:center;background:#050505}
+.footer-signature {font:700 clamp(3.8rem,7vw,7rem)/1 var(--font-sans);letter-spacing:-.065em}
+.studio-footer p {max-width:390px;margin:22px auto;color:#b6b6b6}
+.studio-footer nav {display:flex;justify-content:center;gap:clamp(12px,3vw,48px);flex-wrap:wrap;margin:35px 0;font-size:.95rem}
+.studio-footer nav a:hover {color:#c7b89a}
+.studio-footer small {color:#aaa}
+@media(max-width:1000px){
+ .care-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+ #packages .package-collection {display:grid;grid-template-columns:1fr}
+ .studio-hero-copy p {max-width:39vw}
+}
+@media(max-width:767px){
+ .studio-hero {min-height:0;display:flex;flex-direction:column;background:black;align-items:stretch}
+ .studio-hero-copy {order:-1;padding-top:calc(var(--header-h) + 35px)}
+ .studio-hero-copy h1 {font-size:clamp(2.35rem,9.7vw,3.8rem)}
+ .studio-hero-copy p {max-width:380px;margin:18px 0 22px;font-size:.96rem}
+ .studio-actions {gap:8px}
+ .studio-actions a {height:44px;padding-inline:17px;font-size:.85rem}
+ .studio-hero-photo {z-index:auto;position:relative;inset:auto;width:100%;height:clamp(290px,77vw,480px);mask-image:linear-gradient(black 83%,transparent)}
+ .studio-hero-photo img {object-position:center 76%}
+ .studio-intro,.method-layout {grid-template-columns:1fr;gap:20px}
+
+ .care-grid {gap:10px}
+ .care-card {padding:18px 14px}
+ .care-card .service-copy h3 {font-size:1.15rem}
+ .care-card .service-copy>p {font-size:.84rem}
+ .method-photo {min-height:0;aspect-ratio:1.55}
+ .workshop-image {position:relative;inset:auto;width:100%;height:240px;z-index:0;mask-image:linear-gradient(black 65%,transparent)}
+ .workshop-content {padding-top:0}
+ #packages .package-collection {gap:14px}
+}
+
+.care-grid .care-card {grid-column:auto;display:block}
+.study-layout {display:grid;grid-template-columns:2fr 3fr;gap:7%;align-items:center}
+.study-count {color:#c7b89a;font-size:.85rem;font-variant-numeric:tabular-nums;margin-bottom:36px}
+.study-text h2 {font:450 clamp(2.2rem,3.3vw,3.8rem)/1.12 var(--font-sans);letter-spacing:-.05em}
+.study-text h3 {font-size:1.45rem;color:#c7b89a;margin:20px 0 14px}
+.study-text p:not(.study-count) {color:#b6b6b6;line-height:1.6}
+.study-note {margin-top:28px;padding-top:18px;border-top:1px solid #333;font-size:.85rem}
+.study-image {position:relative;aspect-ratio:1.55;overflow:hidden;border-radius:20px}
+.study-image img,.study-thumb img {object-fit:cover}
+.study-image svg {position:absolute;bottom:18px;right:18px;background:#151515a6;border-radius:50%;padding:10px;width:40px;height:40px}
+.study-strip {display:flex;justify-content:center;gap:clamp(10px,2vw,30px);margin-top:38px}
+.study-thumb button {position:relative;display:block;width:clamp(43px,7vw,78px);aspect-ratio:1;border-radius:50%;overflow:hidden}
+.study-thumb button[aria-pressed="true"] {outline:2px solid #c7b89a;outline-offset:4px}
+.study-thumb button:focus-visible {outline:3px solid white;outline-offset:4px}
+@media(max-width:767px){
+ .study-layout {grid-template-columns:1fr;gap:24px}
+ .study-count {margin-bottom:12px}
+ .study-note {margin-top:14px;padding-top:12px}
+ .study-strip {gap:9px;margin-top:24px}
+}
+
+@media(min-width:768px) and (max-width:1023px){
+ .studio-hero-photo {width:53%;mask-image:linear-gradient(90deg,transparent,#000 14%)}
+ .studio-hero h1 {font-size:clamp(2rem,4.1vw,2.8rem)}
+ .studio-hero-copy p {max-width:41vw;font-size:.95rem}
+ .studio-actions {gap:8px}
+ .studio-actions a {padding-inline:14px;font-size:.83rem;height:44px}
+}
+/* Photographic service stories and concept collection. */
+.studio-hero-photo img {object-position:55% 50%}
+.studio-hero-photo {mask-image:linear-gradient(90deg,transparent,#000 18%),linear-gradient(0deg,transparent,#000 15%);mask-composite:intersect}
+.photographic-services {display:grid;gap:65px}
+.photographic-service {display:grid;grid-template-columns:1.6fr 1fr;gap:clamp(30px,5vw,80px);align-items:center}
+.photographic-service:nth-child(even) {grid-template-columns:1fr 1.6fr}
+.photographic-service:nth-child(even) .service-photograph {grid-column:2;grid-row:1}
+.photographic-service:nth-child(even) .service-copy {grid-column:1;grid-row:1;padding:0}
+.service-photograph {position:relative;aspect-ratio:1.55;overflow:hidden}
+.service-photograph img {object-fit:cover;transition:transform 1s}
+.photographic-service:hover img {transform:scale(1.025)}
+.photographic-service .service-copy {padding:0}
+.service-number {font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--color-accent);margin-bottom:22px}
+.photographic-service .service-copy h3 {font:450 clamp(2rem,3.5vw,3.6rem)/1.05 var(--font-sans);letter-spacing:-.05em;margin:0 0 20px}
+.photographic-service .service-copy>p {max-width:360px;line-height:1.65}
+.service-inquiry {display:flex;justify-content:space-between;gap:30px;align-items:center;width:fit-content;padding-block:17px;border-bottom:1px solid var(--color-accent);margin-top:20px;font-size:.9rem}
+.service-inquiry:hover {color:var(--color-accent)}
+#why-kavero {background:#151515}
+.approach-layout {display:grid;grid-template-columns:1fr 1fr;gap:8%;align-items:center}
+.approach-image {position:relative;aspect-ratio:.95;overflow:hidden}
+.approach-image img {object-fit:cover}
+.approach-copy h2 {font:450 clamp(2.4rem,4vw,4.5rem)/1.05 var(--font-sans);letter-spacing:-.05em;margin-bottom:25px}
+.approach-copy>p:not(.service-number),.approach-copy dd {color:#b6b6b6;line-height:1.65}
+.approach-copy dl {margin-top:32px}
+.approach-copy dl div {padding:18px 0;border-top:1px solid #ffffff24}
+.approach-copy dt {font-size:1.1rem;margin-bottom:6px}
+.approach-copy dd {font-size:.9rem}
+#gallery .editorial-gallery {display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:300px 260px 300px;gap:18px}
+#gallery .editorial-gallery .gallery-tile {grid-column:span 4;grid-row:auto;aspect-ratio:auto;border-radius:0;height:auto}
+#gallery .editorial-gallery .gallery-tile:first-child {grid-column:span 7;grid-row:span 2}
+#gallery .editorial-gallery .gallery-tile:nth-child(2) {grid-column:span 5}
+#gallery .editorial-gallery .gallery-tile:nth-child(3) {grid-column:span 5}
+#gallery .editorial-gallery li:nth-child(6) {grid-column:span 4}
+.editorial-gallery button {position:relative;display:block;width:100%;height:100%;overflow:hidden;text-align:left}
+.editorial-gallery img {object-fit:cover;transition:transform .7s}
+.editorial-gallery button:hover img {transform:scale(1.035)}
+.gallery-caption {position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:35px 22px 20px;background:linear-gradient(transparent,#000c);font-size:.9rem}
+.final-studio {background:var(--color-accent)}
+.final-studio em {color:#302b23}
+#process .workshop-image img {filter:none}
+@media(max-width:767px){
+ .studio-hero-photo {mask-image:linear-gradient(black 80%,transparent)}
+ .photographic-services {gap:48px}
+ .photographic-service,.photographic-service:nth-child(even) {grid-template-columns:1fr;gap:24px}
+ .photographic-service:nth-child(even) .service-photograph,.photographic-service:nth-child(even) .service-copy {grid-column:auto;grid-row:auto}
+ .service-photograph {aspect-ratio:1.2}
+ .service-number {margin-bottom:14px}
+ .approach-layout {grid-template-columns:1fr;gap:30px}
+ .approach-image {aspect-ratio:1.3}
+ #gallery .editorial-gallery {grid-template-columns:1fr 1fr;grid-template-rows:none;grid-auto-rows:230px;gap:12px}
+ #gallery .editorial-gallery .gallery-tile,#gallery .editorial-gallery .gallery-tile:nth-child(n) {grid-column:span 1;grid-row:auto;aspect-ratio:auto}
+ #gallery .editorial-gallery .gallery-tile:first-child,#gallery .editorial-gallery .gallery-tile:last-child {grid-column:span 2}
+ .gallery-caption {font-size:.78rem;padding-inline:12px}
+}
+.kavero-approach .approach-copy {display:block;margin:0}
+.kavero-approach .approach-copy>.service-number {font-size:.7rem;color:var(--color-accent);line-height:1.5}
+.kavero-approach .approach-copy>p:not(.service-number) {font-size:1rem;max-width:480px}
+
+/* Final pass: photographs are colour-graded in the files themselves, so the legacy CSS filters are neutralised to avoid double desaturation. */
+.studio-hero-photo img,.service-photograph img,#why-kavero .approach-image img,#process .workshop-image img,#gallery .editorial-gallery .gallery-tile button img,#gallery .gallery-tile button:hover img,#gallery [role="dialog"] img {filter:none}
+/* Keep the transparent header legible over bright paint reflections */
+@media (min-width:768px){.studio-hero-photo::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(#000 0,rgb(0 0 0/.6) 5.5rem,transparent 14rem),linear-gradient(transparent 82%,#000)}}
+/* Footer links: comfortable tap targets (≥44px tall) without changing the visual rhythm */
+.studio-footer nav a {display:inline-flex;align-items:center;min-height:44px;padding-inline:4px}
+.studio-footer nav {margin:23px 0;row-gap:0}
+
+/* Preserve detail and keep the whole subject within each production photograph. */
+.studio-hero-photo img {object-position:70% 50%}
+#why-kavero .approach-image img {filter:none;object-position:60% 50%}
+#gallery .editorial-gallery img {filter:none}
+#process .workshop-image img {object-position:70% 50%}
+.service-photograph img {object-position:center}
+@media(max-width:767px){
+ .studio-hero-photo img {object-position:75% 50%}
+ .workshop-content li p {font-size:1rem}
+}
+@media(min-width:1536px){.studio-hero {min-height:810px}}
+@media(min-width:1024px){
+ .studio-hero-photo {width:72%}
+ .studio-hero-photo img {object-fit:contain;object-position:center}
+}
+@media(min-width:768px) and (max-width:1023px){
+ .studio-hero-photo {width:56%}
+ .studio-hero-photo img {object-fit:contain;object-position:center}
+}
+@media(max-width:359px){
+ .studio-hero-copy h1 {font-size:2rem;line-height:1.08}
+ .studio-hero-copy {padding-top:calc(var(--header-h) + 26px)}
+}

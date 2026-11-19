@@ -15,8 +15,8 @@ export const siteConfig = {
   shortDescription:
     "Considered exterior, interior and paint care for owners who notice the difference.",
 
-  /** Used for canonical URLs and Open Graph. Set NEXT_PUBLIC_SITE_URL in production. */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  /** Production origin used for canonical URLs and Open Graph. */
+  url: "https://cardetailingservice.vercel.app/",
 
   /** This build is a demonstration. Set to false when launching a real business site. */
   isConcept: true,
@@ -38,10 +38,9 @@ export const siteConfig = {
 } as const;
 
 export const navigation = [
-  { label: "Home", href: "#top", id: "top" },
   { label: "Services", href: "#services", id: "services" },
-  { label: "Why KAVERO", href: "#why-kavero", id: "why-kavero" },
-  { label: "Gallery", href: "#gallery", id: "gallery" },
   { label: "Process", href: "#process", id: "process" },
+  { label: "Gallery", href: "#gallery", id: "gallery" },
+  { label: "Packages", href: "#packages", id: "packages" },
   { label: "Contact", href: "#contact", id: "contact" },
 ] as const;
