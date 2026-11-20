@@ -3,6 +3,8 @@ import { MotionProvider } from "@/components/MotionProvider";
 import { RevealObserver } from "@/components/ui/RevealObserver";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { BeforeAfter } from "@/components/BeforeAfter";
+import { MobileCTA } from "@/components/MobileCTA";
 import { Services } from "@/components/Services";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { Gallery } from "@/components/Gallery";
@@ -20,6 +22,7 @@ export default function Home() {
       <Header />
       <main id="main">
         <Hero />
+        <BeforeAfter />
         <Services />
         <WhyChooseUs />
         <Process />
@@ -30,6 +33,7 @@ export default function Home() {
         <FinalCTA />
       </main>
       <Footer />
+      <MobileCTA />
       <RevealObserver />
     </InquiryProvider>
     </MotionProvider>

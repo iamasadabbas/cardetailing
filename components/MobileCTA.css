@@ -1,0 +1,26 @@
+.mobile-cta-bar, .mobile-cta-space { display: none; }
+
+@media (width < 768px) {
+  .mobile-cta-bar {
+    position: fixed;
+    inset: auto 0 0;
+    z-index: 40;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 12px max(16px, env(safe-area-inset-right)) calc(12px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+    border-top: 1px solid var(--color-line);
+    background: var(--color-ink);
+  }
+
+  .mobile-cta-bar a { min-height: 48px; padding-inline: 12px; }
+
+  .mobile-cta-space {
+    display: block;
+    height: calc(73px + env(safe-area-inset-bottom));
+  }
+
+  html:has(.mobile-cta-bar) {
+    scroll-padding-bottom: calc(85px + env(safe-area-inset-bottom));
+  }
+}

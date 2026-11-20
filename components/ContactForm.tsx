@@ -147,8 +147,9 @@ export function ContactForm() {
               <p className="mt-10 flex max-w-md items-start gap-3 border border-line p-4 text-sm leading-relaxed text-silver" data-reveal>
                 <Info className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
                 <span>
-                  <strong className="font-semibold text-bone">Demonstration form.</strong> Submissions are validated
-                  in your browser only — nothing is sent or stored.
+                  <strong className="block font-semibold text-bone">Preview the quote request experience</strong>
+                  This demonstration shows how customers can request a quote. Your completed website can connect enquiries directly to your email or WhatsApp.
+                  <span className="mt-2 block text-xs">Demo only — no enquiry is sent.</span>
                 </span>
               </p>
             )}
@@ -189,10 +190,9 @@ export function ContactForm() {
                     </span>
                     {status === "demo" ? (
                       <>
-                        <p className="font-display text-2xl font-semibold tracking-tight uppercase">Demo Form Completed</p>
+                        <p className="font-display text-2xl font-semibold tracking-tight uppercase">Demo completed successfully</p>
                         <p className="mt-4 max-w-md leading-relaxed text-silver">
-                          No message has been sent. Connect an email or booking service before launching this website
-                          for a real business.
+                          This was a demonstration submission. No enquiry was sent. Your live website can be connected to receive customer requests.
                         </p>
                       </>
                     ) : (
@@ -298,7 +298,7 @@ export function ContactForm() {
                       </Button>
                       <p className="text-xs leading-relaxed text-silver sm:max-w-[15rem] sm:text-right">
                         {isDemoMode
-                          ? "Demo mode — no data leaves your browser."
+                          ? "Demo only — no enquiry is sent."
                           : "Your details are only used to respond to this inquiry."}
                       </p>
                     </div>
